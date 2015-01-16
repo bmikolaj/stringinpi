@@ -4,8 +4,15 @@ import re
 import argparse
 import sys
 
+class color:
+   red = '\033[91m'
+   bold = '\033[1m'
+   italics = '\x1B[3m'
+   end = '\033[0m'
+
 def main(string=None):
     string = str(string)
+    slen = len(string)
     do = True
     mp.dps = 10000
     try:
@@ -16,15 +23,18 @@ def main(string=None):
                 nst = st - 3
                 if nst < 0:
                     nst = 0
-                nend = st + len(string) + 3
-                print('Start: ' + str(st))
-                print(pi[nst:nend])
+                fstr = st + slen
+                nend = fstr + 3
+                print('Starting Position of String: ' + str(st))
+                print(pi[nst:st] + color.bold + color.red + pi[st:fstr] +\
+                      color.end + pi[fstr:nend])
                 do = False
             else:
                 mp.dps += 10000
     except KeyboardInterrupt:
-        print('\n' + str(len(pi)) + '\n' + 'Interrupted')
-        sys.exit(-1)
+        print('\n' + 'Number of Characters Checked: ' + str(len(pi)) +\
+              '\n' + color.italics + 'Program Interrupted' + color.end)
+        sys.exit(0)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
