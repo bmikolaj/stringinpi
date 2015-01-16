@@ -11,6 +11,7 @@ class color:
 
 def main(string=None):
     string = str(string)
+    print('Searching for ' + string + ' in ' + u'\U0001D6D1')
     slen = len(string)
     do = True
     mp.dps = 100000
@@ -35,8 +36,21 @@ def main(string=None):
               '\n' + 'Program Interrupted')
         sys.exit(0)
 
+def intcheck(val):
+    try:
+        val = int(val)
+    except ValueError:
+        raise argparse.ArgumentTypeError("{} is not a positive integer value"\
+                                         .format(val))
+
+    if val < 1:
+        raise argparse.ArgumentTypeError("{} is not a positive integer value"\
+                                         .format(val))
+    else:
+        return val
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('string')
+    parser.add_argument('string', type=intcheck)
 
     main(**vars(parser.parse_args()))
