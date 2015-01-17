@@ -29,6 +29,7 @@ def main(string=None):
     string = str(string)
     print('Searching for ' + string + ' in ' + u'\U0001D6D1')
     slen = len(string)
+    splen = 4
     do = True
     mp.dps = 100000
     try:
@@ -36,11 +37,11 @@ def main(string=None):
             pi = str(mp.pi())
             if re.search(string, pi):
                 st = pi.find(string)
-                nst = st - 3
+                nst = st - splen
                 if nst < 0:
                     nst = 0
                 fstr = st + slen
-                nend = fstr + 3
+                nend = fstr + splen
                 print('Starting Position of String: ' + str(st))
                 print(pi[nst:st] + color.bold + color.red + pi[st:fstr] +\
                       color.end + pi[fstr:nend])
