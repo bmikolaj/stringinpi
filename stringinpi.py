@@ -16,8 +16,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import argparse
-import re
 from sympy.mpmath import *
+import re #must be imported after sympy
 import sys
 
 class color:
