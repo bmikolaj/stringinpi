@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#String in Pi, stringinpi.py v1.0
+#String in Pi, stringinpi.py v1.01
 #Copyright (c) 2015 by Brian Mikolajczyk, brianm12@gmail.com
 
 # This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ class color:
 
 def main(string=None):
     string = str(string)
-    print('Searching for ' + string + ' in ' + u'\U0001D6D1')
+    print('Searching for ' + string + ' in ' + u'\U0001D6D1' + '...')
     slen = len(string)
     splen = 4
     do = True
@@ -49,9 +49,14 @@ def main(string=None):
             else:
                 mp.dps += 100000
     except KeyboardInterrupt:
-        print('\n' + 'Number of Characters Checked: <' + str(len(pi)) +\
-              '\n' + 'Program Interrupted')
-        sys.exit(0)
+        try:
+            print('\n' + 'Number of Characters Checked: <' + str(len(pi)) +\
+                '\n' + 'Program Interrupted')
+        except UnboundLocalError:
+            print('\n' + 'Number of Characters Checked: <' + str(mp.dps) +\
+                '\n' + 'Program Interrupted')
+        finally:
+            sys.exit(0)
 
 def intcheck(val):
     try:
@@ -70,6 +75,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('string', type=intcheck)
     parser.add_argument('--version', action='version',\
-                         version='stringinpi.py v1.0')
+                         version='stringinpi.py v1.01')
 
     main(**vars(parser.parse_args()))

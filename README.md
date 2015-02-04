@@ -1,5 +1,5 @@
 #Find String in π
-v1.0
+v1.01
 
 ##Description
 
@@ -31,6 +31,16 @@ Run via the following command;
 
 `stringinpi.py [-h] <integer>`
 
+Can be Interrupted with `Ctrl+C`. The program will then print the following;
+
+`user@computer:$ ./stringinpi.py 123456`
+
+`>>Searching for 123456 in π...`
+
+`>>Number of Characters Checked: <100000`
+
+`>>Program Interrupted`
+
 ####Required parameters
 `<integer>` is required.
 
@@ -42,7 +52,7 @@ Run via the following command;
 ###Example 
 `user@computer:$ ./stringinpi.py 123`
 
-`>>Searching for 123 in π`
+`>>Searching for 123 in π...`
 
 `>>Starting Position of String: 1925`
 
@@ -55,6 +65,10 @@ Run via the following command;
   `sudo ./setup.sh uninstall`
 
 ##Changelog
+
+* v1.01 (04 February 2015)
+
+  Added Program Interrupt in README.md
 
 * v1.0 (17 January 2015)
 
