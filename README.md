@@ -1,5 +1,5 @@
 #Find String in π
-v1.01
+v1.02
 
 ##Description
 
@@ -65,6 +65,10 @@ Can be Interrupted with `Ctrl+C`. The program will then print the following;
   `sudo ./setup.sh uninstall`
 
 ##Changelog
+
+* v1.02 (15 March 2015)
+
+  Fixed string starting with 0 bug
 
 * v1.01 (04 February 2015)
 

@@ -59,6 +59,11 @@ def main(string=None):
             sys.exit(0)
 
 def intcheck(val):
+    if val.startswith('0'):
+        oval = val
+    else:
+        oval = False
+
     try:
         val = int(val)
     except ValueError:
@@ -69,7 +74,10 @@ def intcheck(val):
         raise argparse.ArgumentTypeError("{} is not a positive integer value"\
                                          .format(val))
     else:
-        return val
+        if oval:
+            return oval
+        else:
+            return val
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
