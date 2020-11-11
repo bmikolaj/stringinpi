@@ -1,11 +1,11 @@
-#Find String in π
+# Find String in π
 v1.02
 
-##Description
+## Description
 
 String in Pi searches for the first occurance of any integer string in Pi.
 
-##Dependencies
+## Dependencies
 String in Pi was designed for Linux and uses the following programs;
 
 * Python 2.7+
@@ -13,7 +13,7 @@ String in Pi was designed for Linux and uses the following programs;
 * Python module: `sympy` (installed via setup.sh)
 
 
-##Install
+## Install
 * Clone git archive via the following command; 
   
   `git clone https://github.com/bmikolaj/stringinpi.git stringinpi`
@@ -26,7 +26,7 @@ This will install the two dependancies: `pip` and `sympy`.
 
 * If desired, copy the program to your bin directory via `sudo cp stringinpi.py /usr/local/bin/stringinpi.py`
 
-##Usage
+## Usage
 Run via the following command;
 
 `stringinpi.py [-h] <integer>`
@@ -41,15 +41,15 @@ Can be Interrupted with `Ctrl+C`. The program will then print the following;
 
 `>>Program Interrupted`
 
-####Required parameters
+#### Required parameters
 `<integer>` is required.
 
-####Optional parameters
+#### Optional parameters
 `-h` for help
 
 `--version` will print the version of `stringinpi.py` and exit.
 
-###Example 
+### Example 
 `user@computer:$ ./stringinpi.py 123`
 
 `>>Searching for 123 in π...`
@@ -59,12 +59,12 @@ Can be Interrupted with `Ctrl+C`. The program will then print the following;
 `>>047_123_713`
 
 
-##Uninstall
+## Uninstall
 * Run the following command to uninstall;
   
   `sudo ./setup.sh uninstall`
 
-##Changelog
+## Changelog
 
 * v1.02 (15 March 2015)
 
@@ -78,14 +78,14 @@ Can be Interrupted with `Ctrl+C`. The program will then print the following;
 
   Initial Release
 
-##Author
+## Author
 [Brian Mikolajczyk](https://github.com/bmikolaj), brianm12@gmail.com
 
-##Legal
+## Legal
 Copyright (c) 2015, Brian Mikolajczyk, brianm12@gmail.com
 
-###Licence
+### Licence
 Please see file LICENCE.
 
-###Copying
+### Copying
 Please see file COPYING.
